@@ -13,7 +13,7 @@ const app = require('./app'); // Importar app de Express
 
 // Establecer conexión con MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI)
-        // Intento conectarme a la base de datos dentro de atlas
+    // Intento conectarme a la base de datos dentro de atlas
     .then(() => {
         console.log("✅ Conexión a MongoDB Atlas establecida correctamente");
 

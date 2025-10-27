@@ -4,7 +4,6 @@
 // Modulos
 var express = require('express'); // Importo el modulo de express
 var router = express.Router(); //Permite definir rutas y middlewares de forma modular y separada del objeto principal de la app
-const { model } = require('mongoose'); // Traigo el modelo de mongoose
 var productController = require('../controllers/productController'); // Importo modulo que tiene las funciones de productos
 var orderController = require('../controllers/orderController'); // Importo el modulo que tiene las funciones de ordenes
 
