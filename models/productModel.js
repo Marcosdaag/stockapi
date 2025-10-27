@@ -6,8 +6,11 @@ var Schema = mongoose.Schema; // Traigo los esquemas de mongoose
 
 //Creamos el esquema de Products
 var ProdutSchema = Schema({
+    brand: String,
     name: String,
-    realized: Boolean
+    stock: Number,
+    price: Number,
+    normalizedName: String
 });
 
 /* 
@@ -16,4 +19,4 @@ var ProdutSchema = Schema({
 * pasa a minusculas y a plural, lo que quedaria como products el cual
 * es el nombre de nuestra colecction.
 */
-module.exports = mongoose.model('Pending', PendingSchema);
+module.exports = mongoose.model('Product', ProdutSchema);

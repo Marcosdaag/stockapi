@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URI)
 
         // En caso de que se haya podido conectar a atlas, levanta el servidor en el puerto 3000
         app.listen(port, () => {
-            console.log(`✅ Servidor corriendo en puerto ${port}`);
+            console.log(`✅ Servidor funcionando en el puerto ${port}`);
         });
     })
     .catch((error) => console.error("❌ Error al conectar a MongoDB Atlas:", error));
