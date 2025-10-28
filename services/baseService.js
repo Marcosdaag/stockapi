@@ -47,7 +47,7 @@ class BaseService {
     }
 
     // NOTA: No incluimos create() o update() aquí porque
-    // a menudo tienen lógica de negocio única
+    // por lo general tienen lógica de negocio única
     // Es más limpio dejarlos en los servicios específicos.
 }
 

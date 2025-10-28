@@ -16,5 +16,9 @@ router.get('/search', productController.searchProducts);
 router.put('/update/:id', productController.updateProduct);
 router.delete('/delete/:id', productController.deleteProduct);
 
+// Ordenes
+router.post('/new-order', orderController.saveOrder);
+router.get('/list-orders', orderController.getAllOrders);
+router.delete('/delete-order/:id', orderController.deleteOrder);
 
 module.exports = router; // Exporto el modulo
