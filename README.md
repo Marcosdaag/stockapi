@@ -6,6 +6,7 @@ API desarrollada con **Node.js**, **Express** y **MongoDB** para gestionar produ
 
 ### 🏷️ Productos (CRUD)
 - ➕ **Crear** productos.
+- 📋 Listar todos los productos disponibles.
 - ✏️ **Editar** productos existentes.
 - 🗑️ **Eliminar** productos.
 - 📦 **Actualizar stock** y otras propiedades del producto.
