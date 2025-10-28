@@ -7,9 +7,12 @@ var router = express.Router(); //Permite definir rutas y middlewares de forma mo
 var productController = require('../controllers/productController'); // Importo modulo que tiene las funciones de productos
 var orderController = require('../controllers/orderController'); // Importo el modulo que tiene las funciones de ordenes
 
-// Rutas y sus respectivas funciones-metodos guardados en el controlador
+// Rutas y sus respectivas funciones-metodos definidos en el controlador
+
+// Productos
 router.post('/new-product', productController.saveProduct);
 router.get('/list-products', productController.getProducts);
+router.get('/search', productController.searchProducts);
 router.put('/update/:id', productController.updateProduct);
 router.delete('/delete/:id', productController.deleteProduct);
 
