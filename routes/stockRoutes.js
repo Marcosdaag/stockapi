@@ -9,17 +9,19 @@ var orderController = require('../controllers/orderController'); // Importo el m
 
 // Rutas y sus respectivas funciones-metodos definidos en el controlador
 
+// Todos tienen la url similar pero lo que cambia es el metodo
+
 // Productos
-router.post('/new-product', productController.saveProduct);
-router.get('/list-product', productController.getProduct);
-router.get('/list-products', productController.getProducts);
+router.post('/products', productController.saveProduct);
+router.get('/products/:id', productController.getProduct);
+router.get('/products', productController.getProducts);
 router.get('/search', productController.searchProducts);
-router.put('/update/:id', productController.updateProduct);
-router.delete('/delete/:id', productController.deleteProduct);
+router.put('/products/:id', productController.updateProduct);
+router.delete('/products/:id', productController.deleteProduct);
 
 // Ordenes
-router.post('/new-order', orderController.saveOrder);
-router.get('/list-orders', orderController.getAllOrders);
-router.delete('/delete-order/:id', orderController.deleteOrder);
+router.post('/orders', orderController.saveOrder);
+router.get('/orders', orderController.getAllOrders);
+router.delete('/orders/:id', orderController.deleteOrder);
 
 module.exports = router; // Exporto el modulo
