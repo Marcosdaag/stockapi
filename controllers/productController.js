@@ -34,6 +34,23 @@ var productController = {
         }
     },
 
+    //Metodo para devolver un solo producto
+    getProduct: async function (request, response) {
+        var productId = request.params.id; // Id del objeto
+
+        try {
+            const product = await Pending.findById(productId);
+            if (!product) {
+                return response.status(404).send({ mesage: '❌ No hay producto que mostrar...' });
+            } else {
+                return response.status(200).send({ product });
+            }
+        }
+        catch (error) {
+            return response.status(500).send({ message: '❌ Error en el servidor...' });
+        }
+    },
+
     // Metodo para actualizar producto
     updateProduct: async function (request, response) {
         try {

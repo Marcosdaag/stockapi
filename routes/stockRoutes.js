@@ -11,6 +11,7 @@ var orderController = require('../controllers/orderController'); // Importo el m
 
 // Productos
 router.post('/new-product', productController.saveProduct);
+router.get('/list-product', productController.getProduct);
 router.get('/list-products', productController.getProducts);
 router.get('/search', productController.searchProducts);
 router.put('/update/:id', productController.updateProduct);
