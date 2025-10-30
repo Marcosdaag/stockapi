@@ -1,4 +1,4 @@
-# 🛒 API de Gestión de Stock para Tiendas
+# 🛒 API de Gestión de Pedidos y Stock.
 
 API desarrollada con **Node.js**, **Express** y **MongoDB** para gestionar productos y pedidos en un pequeño mercado, diseñada para **uso exclusivo de los vendedores**.
 
