@@ -2,6 +2,8 @@
 'use strict'
 
 // Modulos
+const dotenv = require('dotenv');
+dotenv.config();
 var express = require('express'); // Importo modulo de express
 var bodyParser = require('body-parser'); // Importo modulo de bodyParser
 var app = express();
