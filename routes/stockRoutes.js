@@ -27,6 +27,6 @@ router.get('/orders', verifyToken, orderController.getAllOrders);
 router.delete('/orders/:id', verifyToken, orderController.deleteOrder);
 
 // Usuarios
-router.post('/login', authController.login)
+router.post('/login', authController.login);
 
 module.exports = router; // Exporto el modulo
