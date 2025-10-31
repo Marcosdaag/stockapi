@@ -37,6 +37,19 @@ API desarrollada con **Node.js**, **Express** y **MongoDB** para gestionar produ
 
 </br>
 
+## 🐳 Probar la API con Docker
+
+Podés usar la imagen directamente desde GitHub Packages:
+
+```bash
+# Descargar la imagen
+docker pull ghcr.io/marcosdaag/stockapi:latest
+
+# Ejecutar la API
+docker run -p 3000:3000 ghcr.io/marcosdaag/stockapi:latest
+
+</br>
+
 ### 📖 UML - Diagrama de clases
 [![Diagrama-de-clases.png](https://i.postimg.cc/fLLdY0hy/Diagrama-de-clases.png)](https://postimg.cc/yJMWHxxC)
 
