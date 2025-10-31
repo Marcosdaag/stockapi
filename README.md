@@ -47,6 +47,7 @@ docker pull ghcr.io/marcosdaag/stockapi:latest
 
 # Ejecutar la API
 docker run -p 3000:3000 ghcr.io/marcosdaag/stockapi:latest
+```
 
 </br>
 
