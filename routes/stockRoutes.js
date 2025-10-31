@@ -16,7 +16,7 @@ var authController = require('../controllers/authController');
 // Productos
 router.post('/products', verifyToken, productController.saveProduct);
 router.get('/products/:id', verifyToken, productController.getProduct);
-router.get('/products', verifyToken, productController.getProducts);
+router.get('/products', productController.getProducts);
 router.get('/search', verifyToken, productController.searchProducts);
 router.put('/products/:id', verifyToken, productController.updateProduct);
 router.delete('/products/:id', verifyToken, productController.deleteProduct);
