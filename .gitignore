@@ -139,7 +139,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Script local para crear usuarios manualmente
-createUserScript.js
+# createUserScript.js
 
 # Archivos de docker
 .dockerignore
