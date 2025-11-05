@@ -38,6 +38,9 @@ API desarrollada con **Node.js**, **Express** y **Mongo** (Atlas Database) para 
 
 </br>
 
+## ✅ Constante up del deploy mediante
+https://uptimerobot.com/
+
 ## 🐳 Probar la API con Docker
 
 Podés usar la imagen directamente desde GitHub Packages:
