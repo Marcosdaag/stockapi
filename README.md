@@ -17,8 +17,9 @@ API desarrollada con **Node.js**, **Express** y **Mongo** (Atlas Database) para 
 - 📊 **Guardar información de cada pedido**: productos, cantidad, fecha y total.
 - 💰 **Calcular descuentos y precio de venta** (opcional).
 
-### 🧾 Contacto
-- 🛍️ **Formulario**, contactarse vial email.
+### 📩 Contacto
+- 📰 **Formulario**, contactarse vial email.
+- 🔁 **Resend**, libreria y herramienta resend para la gestion de emails https://resend.com/.
 
 
 </br>
