@@ -6,8 +6,9 @@ var express = require('express'); // Importo el modulo de express
 var router = express.Router(); //Permite definir rutas y middlewares de forma modular y separada del objeto principal de la app
 var productController = require('../controllers/productController'); // Importo modulo que tiene las funciones de productos
 var orderController = require('../controllers/orderController'); // Importo el modulo que tiene las funciones de ordenes
-var  verifyToken = require('../middlewares/jwtMiddleware');
+var verifyToken = require('../middlewares/jwtMiddleware');
 var authController = require('../controllers/authController');
+var emailController = require('../controllers/emailController');
 
 // Rutas y sus respectivas funciones-metodos definidos en el controlador
 
@@ -28,5 +29,8 @@ router.delete('/orders/:id', verifyToken, orderController.deleteOrder);
 
 // Usuarios
 router.post('/login', authController.login);
+
+// Contacto
+router.post('/contact', emailController.sendEmail);
 
 module.exports = router; // Exporto el modulo
