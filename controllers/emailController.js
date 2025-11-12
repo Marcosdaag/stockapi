@@ -1,6 +1,6 @@
 'use strict'
 
-var nodeEmail = require('nodemailer');
+import nodemailer from 'nodemailer';
 
 export const sendEmail = async (req, res) => {
     const { name, email, message } = req.body;
@@ -11,7 +11,7 @@ export const sendEmail = async (req, res) => {
 
     try {
         // Configuración del transporte (para Gmail, por ejemplo)
-        const transporter = nodeEmail.createTransport({
+        const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
                 user: process.env.EMAIL_USER,       // tu correo Gmail
