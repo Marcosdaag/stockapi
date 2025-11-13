@@ -4,6 +4,7 @@ var User = require('../models/userModel');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var dotenv = require('dotenv');
+dotenv.config();
 
 var authController = {
     // Metodo para loguear
