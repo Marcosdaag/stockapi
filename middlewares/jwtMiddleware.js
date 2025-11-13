@@ -16,7 +16,7 @@ function verifyToken(req, res, next) {
     if (!token) return res.status(401).json({ message: 'Token inválido' });
 
     try {
-        const decoded = jwt.verify(token, 'MI_SECRETO_SEGURO_123456');
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded; // guardamos info del usuario en la request
         next(); // seguimos al controlador
     } catch (err) {

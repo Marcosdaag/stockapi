@@ -22,7 +22,7 @@ var authController = {
             // Generar JWT
             const token = jwt.sign(
                 { id: user._id, username: user.username, role: user.role },
-                'MI_SECRETO_SEGURO_123456',
+                process.env.JWT_SECRET,
                 { expiresIn: '4h' }
             );
 
