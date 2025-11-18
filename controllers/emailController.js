@@ -3,17 +3,20 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (req, res) => {
   const { name, email, message } = req.body;
+  const appName = process.env.APP_NAME || 'StockApp';
+
 
   try {
     await resend.emails.send({
-      from: 'StockApp <onboarding@resend.dev>', // o dominio verificado
+      from: `${appName} <onboarding@resend.dev>`,
       to: 'marcosoffs99@gmail.com',
-      subject: `Nuevo mensaje de ${name}`,
+      subject: `[${appName}] Nuevo mensaje de ${name}`,
       html: `<p><strong>Nombre:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
-             <p><strong>Mensaje:</strong> ${message}</p>`
+             <p><strong>Mensaje:</strong> ${message}</p>
+             <br>
+             <small>Enviado desde: ${appName}</small>`
     });
-
     res.json({ ok: true, mensaje: 'Correo enviado correctamente.' });
   } catch (error) {
     console.error(error);
