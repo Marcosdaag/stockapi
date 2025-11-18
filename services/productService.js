@@ -22,7 +22,7 @@ class ProductService extends BaseService {
             brand: productData.brand,
             name: productData.name,
             stock: productData.stock,
-            price: Number(productData.price) * 1.5,
+            price: productData.price,
             normalizedName: utils.normalizeText(productData.name)
         });
 
