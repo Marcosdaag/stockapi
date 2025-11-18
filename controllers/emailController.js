@@ -5,6 +5,7 @@ export const sendEmail = async (req, res) => {
   const { name, email, message } = req.body;
   const appName = process.env.APP_NAME;
 
+  console.log("Variable APP_NAME leída:", appName);
 
   try {
     await resend.emails.send({
