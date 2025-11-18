@@ -3,7 +3,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (req, res) => {
   const { name, email, message } = req.body;
-  const appName = process.env.APP_NAME || 'StockApp';
+  const appName = process.env.APP_NAME;
 
 
   try {
