@@ -11,7 +11,7 @@ export const sendEmail = async (req, res) => {
     await resend.emails.send({
       from: `${appName} <onboarding@resend.dev>`,
       to: 'marcosoffs99@gmail.com',
-      subject: `[${appName}] Nuevo mensaje de ${name}`,
+      subject: `"${appName}" Nuevo mensaje de ${name}`,
       html: `<p><strong>Nombre:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Mensaje:</strong> ${message}</p>
