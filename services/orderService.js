@@ -16,7 +16,7 @@ class OrderService extends BaseService {
     async getAll() {
         const documents = await this.model.find({})
             .sort('-createdAt')
-            .populate('products.product', 'name price') // Trae 'name' y 'price' del producto
+            .populate('products.product', 'name price brand') // Trae 'name' y 'price' del producto
             .exec();
 
         if (!documents || documents.length === 0) {
@@ -29,7 +29,7 @@ class OrderService extends BaseService {
     // getById trae tambien el nombre y el precio
     async getById(id) {
         const document = await this.model.findById(id)
-            .populate('products.product', 'name price')
+            .populate('products.product', 'name price brand')
             .exec();
 
         if (!document) {
@@ -63,12 +63,16 @@ class OrderService extends BaseService {
             totalPrice += product.price * item.quantity;
 
             // Guardamos la referencia para la orden
-            productsToSave.push({ product: product._id, quantity: item.quantity });
+            // CAMBIO AQUÍ: Agregamos la propiedad customName
+            productsToSave.push({
+                product: product._id,
+                quantity: item.quantity,
+                customName: item.customName || null // <--- NUEVA LÍNEA: Guarda el nombre manual o null
+            });
         }
 
         // --- BUCLE DE ACTUALIZACIÓN ---
         // 2. Si todo está bien, descontamos el stock
-        //    (Lo hacemos en un bucle separado para no descontar si un producto anterior falla)
         try {
             for (const item of orderData.items) {
                 await productService.updateProduct(item.productId, {
@@ -76,7 +80,6 @@ class OrderService extends BaseService {
                 });
             }
         } catch (error) {
-            // Esto es un error grave, la lógica de actualización de stock falló
             throw new Error('Error crítico al actualizar el stock: ' + error.message);
         }
 

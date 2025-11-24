@@ -17,7 +17,8 @@ var OrderSchema = Schema({
                 type: Number,
                 required: true,
                 min: 1
-            }
+            },
+            customName: { type: String }
         }
     ],
     // El precio total de esta orden

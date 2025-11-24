@@ -32,4 +32,4 @@ async function createUser(username, password, role = "vendedor") {
 }
 
 // 🔧 Acá creás tus usuarios manualmente
-createUser("admin", "1234", "vendedor");
+createUser("admin2", "1234", "vendedor");
