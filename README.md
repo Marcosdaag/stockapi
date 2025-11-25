@@ -66,11 +66,11 @@ docker run -p 3000:3000 ghcr.io/marcosdaag/stockapi:latest
 ### 📖 UML - Diagrama de secuencia
 [![Diagrama-de-secuencia.png](https://i.postimg.cc/vZF5CB5N/Diagrama-de-secuencia.png)](https://postimg.cc/BXp8KJYT)
 
-VARIABLES DE ENTORNO NECESARIAS
-APP_NAME="Subject del email"
-EMAIL_PASS="Key para envio de emails"
-EMAIL_USER= email al que llegan los mensajes
-JWT_SECRET= 
-MONGO_URI= conexion a la data base
-PORT=
-RESEND_API_KEY= api key de resend
+- VARIABLES DE ENTORNO NECESARIAS
+- APP_NAME="Subject del email"
+- EMAIL_PASS="Key para envio de emails"
+- EMAIL_USER= email al que llegan los mensajes
+- JWT_SECRET= 
+- MONGO_URI= conexion a la data base
+- PORT=
+- RESEND_API_KEY= api key de resend
