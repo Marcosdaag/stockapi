@@ -1,4 +1,5 @@
 # 🛒 API de Gestión de Pedidos y Stock.
+https://marcosdaag-stockapi.mintlify.app/
 
 API desarrollada con **Node.js**, **Express** y **Mongo** (Atlas Database) para gestionar productos y pedidos en un pequeño mercado, diseñada para **uso exclusivo de los vendedores**.
 
